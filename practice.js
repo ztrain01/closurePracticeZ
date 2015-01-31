@@ -69,13 +69,29 @@ var count = makeCounter();
 //Next Problem
 
 
+var fn = function(cb, n) {
+    return cb(n);
+  }
+
+  var callBackFn = function(n) {
+    return function() {
+      n--;
+      if(n >= 1){
+        console.log('weeee');
+    } else {
+      console.log('STAHHP');
+    }
+      }
+      
+    }
+
 
 /*
   Write a function that accepts another function as it's first argument and returns a new function
   (which invokes the original function that was passed in) that can only ever be executed once.
   Once completed, add a second arguments that allows the function to be invoked N number of times.
   After the function has been called N number of times, console.log('STAHHP');
-*/
+*
 
 originalFunction()
 
